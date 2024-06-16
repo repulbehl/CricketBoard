@@ -1,0 +1,145 @@
+.container-xxl {
+    background: transparent;
+}
+
+.selector {
+    height: 650 px;
+    color: #fff;
+    background-size: 100%;
+    background-image:   linear-gradient(rgba(221, 241, 150, 0.164), rgba(29, 68, 37, 0.925)), url(\src\assets\player-detail-images\3468697.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* background-image: url("https://wallpaperaccess.com/full/3819073.jpg"); */
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.2rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    position: relative;
+}
+
+.box>* {
+    flex: 22%;
+    padding-bottom: 25px;
+    margin: 0.2rem;
+    background: transparent;
+    border-radius: 12px;
+}
+
+.content1 {
+    padding-bottom: 0px;
+    padding-top: 0.2rem;
+    width: fit-content;
+    margin: 0.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #130f0ce7;
+    border-radius: 12px;
+}
+
+.img1 {
+    width: 10.6rem;
+    height: 9.6rem;
+    text-align: center;
+    margin: 10px;
+    display: block;
+    border-radius: 12px;
+}
+
+.sz {
+    font-size: 13px;
+    font-weight: 647;
+    color: #c5d3f0;
+}
+
+.star {
+    padding: 5px;
+    font-size: 25px;
+}
+
+span {
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+li {
+    padding-top: 5px;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+.checked-heart {
+    color: red;
+}
+
+.my-card {
+    width: min-content;
+}
+
+.btn {
+    text-align: center;
+}
+
+.container-sm {
+    margin-top: 5.6rem;
+    padding: 3rem;
+    max-width: fit-content;
+    background-color: #130f0ce7;
+    border-radius: 1rem;
+}
+
+.center img {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 250px;
+}
+
+h4,
+h6 {
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.card-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: blue;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.center .btn {
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+
+.btn-light {
+    color: #fff;
+    background-color: rgba(35 88 20 / 99%)!important;
+    border-color: rgba(35 88 20 / 99%)!important;
+}

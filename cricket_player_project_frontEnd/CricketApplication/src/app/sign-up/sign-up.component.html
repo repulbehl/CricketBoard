@@ -1,0 +1,89 @@
+<section style="background-image: url('https://wallpaperaccess.com/full/6402575.jpg'); ">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-200  pt-5 mt-5 mb-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 ">
+                    <div class="card" style="border-radius: 15px; height: 650px;">
+                        <div class="card-body p-4">
+                            <h2 class="text-uppercase text-center mb-3">Create an account</h2>
+
+                            <form [formGroup]="myform" (ngSubmit)=addUser()>
+
+                                <div class="form-outline mb-2">
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="User Name" name="Name" formControlName="Name" />
+                                    <label class="form-label" for="form3Example1cg">User Name</label>
+                                    <div *ngIf="!isUserNameCtrlRequireValid() " class="text-danger" >
+                                        UserName is required !
+                                    </div>
+                            
+                                    <div *ngIf="!isUserNameCtrlMinLengthValid() " class="text-danger">
+                                        Min length is 2! 
+                                    </div>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <input type="text" id="form3Example3cg" class="form-control form-control-lg" placeholder="Email" name="Email" formControlName="Email" />
+                                    <label class="form-label" for="form3Example3cg">Your Email</label>
+                                    <div *ngIf="!isEmailCtrlRequireValid()" class="text-danger" >
+                                        Email is required !
+                                    </div>
+                            
+                                    <div *ngIf="!isEmailCtrlMinLengthValid() " class="text-danger">
+                                        Min length is 2! 
+                                    </div>
+                                </div>
+                                
+                                <div class="form-outline mb-2">
+                                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password" name="Password" formControlName="Password" />
+                                    <label class="form-label" for="form3Example4cg">Password</label>
+                                    <div *ngIf="!isPassWordCtrlRequireValid() " class="text-danger" >
+                                        Password is required !
+                                    </div>
+                            
+                                    <div *ngIf="!isPassWordCtrlMinLengthValid() " class="text-danger">
+                                        Min length is 2! 
+                                    </div>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Retype-Password" name="RePassword" formControlName="RePassword" />
+                                    <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                                    <div *ngIf="!isRePassWordCtrlRequireValid() " class="text-danger" >
+                                        Reset Password is required !
+                                    </div>
+                            
+                                    <div *ngIf="!isRePassWordCtrlMinLengthValid() " class="text-danger">
+                                        Min length is 2! 
+                                    </div>
+                                </div>
+
+                                <div class="form-check d-flex justify-content-center mb-3">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" name="chck" formControlName="chck" />
+                                    <label class="form-check-label" for="form2Example3g">
+                                        
+                                        I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                </label>
+                <br>
+                <div *ngIf="!isCheckedCtrlRequireValid() " class="text-danger" >
+                    Please Accept CheckBox
+                 </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                                </div>
+                                <div *ngIf="errMsg">
+                                    <p class="text-danger">  Couldnt login , check the box or recheck password </p>  
+                                  </div>
+
+                            </form>
+
+
+                            <p class="text-center text-muted mt-2 mb-1">Have already an account? <a href="http://localhost:4200/log-in" class="fw-bold text-body"><u>Login here</u></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

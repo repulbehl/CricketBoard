@@ -1,0 +1,107 @@
+<!-- Section: Design Block -->
+<div id="background_design">
+    <section class="text-center text-lg-start">
+        <!-- style="background-color: rgb(89,140,8);"-->
+        <style>
+            .cascading-right {
+                margin-right: -50px;
+            }
+            
+            @media (max-width: 991.98px) {
+                .cascading-right {
+                    margin-right: 0;
+                }
+            }
+        </style>
+
+        <!-- Jumbotron -->
+        <div class="container py-4">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-6 mb-8 mb-lg-0">
+                    <div class="card cascading-right" style="
+                background: hsla(0, 0%, 100%, 0.55);
+                backdrop-filter: blur(30px);
+                ">
+                        <div class="card-body p-5 shadow-5 text-center">
+                            <h2 class="fw-bold mb-5" style="font-size: 40px; font-weight: bold">Log In Now</h2>
+
+                            <form [formGroup]="myform" (ngSubmit)="checkUser()">
+
+                                <!-- Email input -->
+
+                                <div style="margin-left: 15%;">
+                                    <div class="form-group row">
+                                        <label for="staticEmail" class="col-sm-3 col-form-label" style="font-size: 20px;font-weight: bold;">Username</label>
+                                        <div class="col-sm-6 ml-2 ">
+                                            <input type="text" class="form-control" id="Email" placeholder="username" name="username" formControlName="username">
+                                        </div>
+                                        <div *ngIf="!isUserNameCtrlRequireValid() " class="text-danger">
+                                            UserName is required !
+                                        </div>
+
+                                        <div *ngIf="!isUserNameCtrlMinLengthValid() " class="text-danger">
+                                            Min length is 2!
+                                        </div>
+                                    </div>
+                                    <br />
+
+                                    <br />
+
+
+                                    <!-- Password input -->
+                                    <div class="form-group row">
+                                        <label for="inputPassword" class="col-sm-3 col-form-label" style="font-size: 20px;font-weight: bold;">Password</label>
+                                        <div class="col-sm-6">
+                                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="Password" formControlName="Password">
+                                        </div>
+                                        <div *ngIf="!isPassWordCtrlRequireValid() " class="text-danger">
+                                            Password is required !
+                                        </div>
+
+                                        <div *ngIf="!isPassWordCtrlMinLengthValid() " class="text-danger">
+                                            Min length is 2!
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+
+                                <!-- Submit button -->
+                                <button class="btn btn-light btn-block mb-4" style="font-size: 18px;">
+                   Log In
+                  </button>
+                                <div *ngIf="errMsg">
+                                    <p class="text-danger"> Couldnt login , Invalid credentials </p>
+                                </div>
+
+                                <!-- Register buttons -->
+                                <div class="text-center">
+                                    <p style="font-size: 13px;">New User : <button class="btn btn-light " (click)="movePage('sign-up')">Sign Up</button></p>
+                                    <!-- <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+    
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+    
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </button>
+    
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                      <i class="fab fa-github"></i>
+                    </button>
+                    -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 mb-6 mb-lg-3">
+                    <img src="https://c1.wallpaperflare.com/preview/405/810/548/sunset-field-game-stadium.jpg" id="Sideimage" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
